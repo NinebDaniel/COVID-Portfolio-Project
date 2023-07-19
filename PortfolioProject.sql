@@ -1,30 +1,38 @@
+/*
+COVID 19 Data Exploration
+
+Skills Used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
+
+*/
+
 Select * 
 From PortfolioProject.dbo.CovidDeaths
 Where Continent is not null
 order by 3,4
 
--- Select Data that we are going to be using
+-- Select Data that we are going to be starting with
 
 select Location, date, total_cases, new_cases, total_deaths, population
 from PortfolioProject.dbo.CovidDeaths
 order by 1,2
 
--- Looking at Total Cases vs Total Deaths
+-- Total Cases vs Total Deaths
 -- Shows likelihood of dying if you contract COVID in your country
+	
 select Location, date, total_cases,total_deaths, (Total_deaths/total_cases)*100 as DeathPercentage
 from PortfolioProject.dbo.CovidDeaths
 Where location like '%states%'
 order by 1,2
 
---Looking at the Total Cases vs Population
---Shows what percentage of population got Covid
+--Total Cases vs Population
+--Shows what percentage of population was infected with Covid
 
 select Location, date, population, total_cases, (total_cases/population)*100 as PercentPopulationInfected
 from PortfolioProject.dbo.CovidDeaths
 --Where location like '%states%'
 order by 1,2
 
--- Looking at Countries with Highest Infection Rate compared to Population
+--Countries with Highest Infection Rate compared to Population
 
 select Location, population, MAX (total_cases) AS HighestInfectionCount, MAX((total_cases/population))*100 as PercentPopulationInfected
 from PortfolioProject.dbo.CovidDeaths
