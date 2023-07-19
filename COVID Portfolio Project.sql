@@ -1,5 +1,5 @@
 /*
-COVID 19 Data Exploration
+COVID 19 Data Exploration (Jan 22, 2020-Apr 30, 2021)
 
 Skills Used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
 
