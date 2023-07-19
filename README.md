@@ -34,4 +34,4 @@ This project can be used to gain insights into the COVID-19 pandemic's impact ac
 
 ### Acknowledgments
 
-I would like to thank AlexTheAnalyst for their guidance throughout the development of this project. I would also like to express my gratitude to Coursera's Google Data Analytics course for providing me with a comprehensive and invaluable learning experience in SQL. 
+I would like to thank AlexTheAnalyst for their guidance throughout the development of this project. I would also like to express my gratitude to Coursera's Google Data Analyst course for providing me with a comprehensive and invaluable learning experience in SQL. 
